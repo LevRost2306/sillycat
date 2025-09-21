@@ -24,10 +24,8 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
         setContent {
             SillycatTheme {
-                // Вызываем только один корневой Composable
                 ImageWithNoseTap()
             }
         }
@@ -38,13 +36,10 @@ class MainActivity : ComponentActivity() {
 fun ImageWithNoseTap() {
     val context = LocalContext.current
     val mediaPlayer = remember { MediaPlayer.create(context, R.raw.meow) }
-
-    // Задаём границы прямоугольника вокруг носа кота
     val noseLeft   = 405f
     val noseTop    = 1089f
     val noseRight  = 539f
     val noseBottom = 1349f
-
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -64,15 +59,12 @@ fun ImageWithNoseTap() {
             contentScale = ContentScale.FillBounds
         )
     }
-}  // ← Не забываем закрыть функцию ImageWithNoseTap!
+}
 
 @Preview
 @Composable
 fun CombinedPreview() {
     SillycatTheme {
-        // Для превью выводим оба экрана в колонке
-
-            ImageWithNoseTap()
-
-    }
+       ImageWithNoseTap()
+     }
 }
