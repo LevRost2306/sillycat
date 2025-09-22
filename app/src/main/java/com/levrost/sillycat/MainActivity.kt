@@ -2,7 +2,6 @@ package com.levrost.sillycat
 
 import android.media.SoundPool
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -49,7 +48,6 @@ fun ImageWithNoseTap() {
     val noseBottomRatio = 0.556f
     var imageWidth by remember { mutableFloatStateOf(0f) }
     var imageHeight by remember { mutableFloatStateOf(0f) }
-    Log.d("CAT", "imageWidth=$imageWidth imageHeight=$imageHeight")
     Box(
         modifier = Modifier
             .fillMaxSize()
