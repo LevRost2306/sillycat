@@ -74,7 +74,6 @@ fun ImageWithNoseTap() {
                 .onGloballyPositioned { cords ->
                     imageWidth = cords.size.width.toFloat()
                     imageHeight = cords.size.height.toFloat()
-                    Log.d("CAT", "width=$imageWidth height=$imageHeight")
                 },
             contentScale = ContentScale.FillBounds
         )
